@@ -14,6 +14,19 @@ public class Login {
     String username;
     String password;
     String phoneNumber;
+    String firstName;
+    String lastname;
+    /*
+    *constactor used to initialise the user registation details.
+    *The values entered by the userare assigned to the class variable.
+    */
+    public login (String firstName, String lastName, String username, String password, String phoneNumber){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
+    }
     
     //Username  Validation
     public boolean checkUserName(String username) {
@@ -70,6 +83,9 @@ return "User registered successfully.";
                     
                 }
             }
-            
+//Login feature validation
+public boolean loginUser(String username, String password) {
+  return this.username.equals(username) && this.password.equals(password);
+}
             
         
