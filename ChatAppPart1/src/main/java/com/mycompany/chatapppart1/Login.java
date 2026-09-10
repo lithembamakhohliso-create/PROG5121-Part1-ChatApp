@@ -15,22 +15,26 @@ public class Login {
     String password;
     String phoneNumber;
     String firstName;
-    String lastname;
+    String lastName;
     /*
     *constactor used to initialise the user registation details.
     *The values entered by the userare assigned to the class variable.
     */
-    public login (String firstName, String lastName, String username, String password, String phoneNumber){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.username = username;
-        this.password = password;
-        this.phoneNumber = phoneNumber;
+   public Login (String firstName, String lastName, String username, String password, String phoneNumber){
+       this.firstName = firstName;
+       this.lastName = lastName;
+       this.username = username;
+       this.password = password;
+       this.phoneNumber = phoneNumber;
     }
     
-    //Username  Validation
-    public boolean checkUserName(String username) {
-        return username.contains("_")&& username.length() <=5;
+   //Username Validation
+    public boolean checkUserName (String username) {
+        if (username.contains("_")&& username.length()<=5){
+            return true;
+        }else
+            return false;
+    }
         
     }
         
@@ -74,10 +78,7 @@ return "Password is not correctly formatted; please ensure that the password con
 if (!checkCellphoneNumber(phoneNumber)) { 
 return "Cell phone number incorrectly formatted or does not contain international code."; 
 } 
-this.username = username; 
-this.password = password; 
-this.phoneNumber = phoneNumber; 
-return "User registered successfully."; 
+
                
                
                     
