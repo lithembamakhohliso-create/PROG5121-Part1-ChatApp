@@ -11,13 +11,13 @@ package com.mycompany.chatapppart1;
 public class Login {
 
     // Declare variables that are going to be used by the user
-    String username;
-    String password;
-    String phoneNumber;
-    String firstName;
-    String lastName;
-    String enteredUsername;
-    String enteredPassword;
+    private String username;
+    private String password;
+    private String phoneNumber;
+    private String firstName;
+    private String lastName;
+    private String enteredUsername;
+    private String enteredPassword;
 
     /*
      * Constructor used to initialise the user registration details.
@@ -32,7 +32,11 @@ public class Login {
         this.password = password;
         this.phoneNumber = phoneNumber;
     }
+public void setPassword(String password) {
+    this.password = password;
+}
 
+/*This method set the user's registered username,
     // Username Validation
     public boolean checkUserName() {
         if (username.contains("_") && username.length() <= 5) {
