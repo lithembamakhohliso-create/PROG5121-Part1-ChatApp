@@ -101,6 +101,7 @@ public class Main {
                             + "and a special character."
             );
             return;
+        }
         
             // Ask the user to enter their cellphone number.
             System.out.print ("Enter your cellphone number: ");
@@ -140,7 +141,7 @@ public class Main {
             String enteredUsername = input.nextLine();
             
             while (enteredUsername.trim().isEmpty()){
-                System.out.println("Username cannot be empty."){
+                System.out.println("Username cannot be empty.");
                 System.out.print ("Enter your username:");
                 enteredUsername = input.nextLine();
             }
@@ -169,6 +170,6 @@ public class Main {
                 System.out.println(login.returnLoginStatus());
             }
             }
-    }
     
-}
+    
+

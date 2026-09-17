@@ -146,7 +146,7 @@ public class Login {
          }
      }
      // mMethod checks if phone number starts with southafrican international country code +27 and is 12 characters long.
-     public boolean CheckCellPhoneNumber(){
+     public boolean checkCellPhoneNumber(){
          if (phoneNumber.startsWith ("+27")
                  &&
                  phoneNumber.length()==12) {
