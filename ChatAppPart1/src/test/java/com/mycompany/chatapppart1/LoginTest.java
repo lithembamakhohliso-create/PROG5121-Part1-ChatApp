@@ -95,6 +95,13 @@ public class LoginTest {
     }
 
 }
+/**
+     * Test of loginUser() method, of class Login.
+     * 
+     * This test enters the correct username and password and
+     * checks that loginUser() returns true.
+     */
+    
 
 @Test
 public void testLoginUser(){
@@ -106,5 +113,26 @@ public void testLoginUser(){
         "+27838968976");
     //Store the username entered during login.
     login.setEnteredUsername("kyl_l");
+    
+    //Check the login is successful.
+    assertTrue(login.loginUser());
+    
+    
+    /**
+     * Test of returnLoginStatus() method, of class Login.
+     * 
+     * This test checks whether the correct welcome message
+     * is returned after a successful login.
+     */
+    
+    
+    @Test
+    public  voild testReturnloginStatus() {
+    
+}
+    
+   
+   
+    
             
 }
