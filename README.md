@@ -10,79 +10,44 @@ Module Code:PROG5121
 Assessment: Registration and Login Features
 
 
-PROJECT OVERVIEW
-ChatApp Part 1 is a Java-based application that demonstrates a basic user registration and login system. The project allows a user to enter their personal details, create a username and password, and provide a            South African cellphone number. The application checks whether the information entered follows the required rules before allowing the user to log in. The project also includes Junit tests to check that the registration and login methods work correctly.
-FEATURES:
-User registration
-Username validation
-Password complexity validation
-South African cellphone number validation
-User login
-Login status messages
-Junit unit tests for valid and invalid inputs
-TECHNOLOGIES USED:
-Java
-Maven
+Assessment: Part 1 part 2
+Project Overview
+This Java console application was created for PROG5121 Part 1. It lets a user register with a username, password, and South African cellphone number, then log in with those credentials.u for creating, sending, storing, and viewing messages.
+Features
+Validates usernames for an underscore and a maximum length of five characters
+Checks password complexity requirements
+Validates South African cellphone numbers in international format (`+27` followed by nine digits)
+Registers users and authenticates login credentials
+Displays a welcome message using the user's first and last name
+Creates message IDs and message hashes
+Lets users send, disregard, store, and view messages
+Saves stored messages to `messages.json`
+Includes JUnit tests for login and message features
+Technologies Used
+Java 25
+Apache Maven
 NetBeans
 JUnit 5
-Java Scanner for user inputs
-PROJECT STRUCTURE
-The project is organised into the following main files:
-Main.java – Contains the main program and handles user input, registration and login.
-Login.java – Contains the methods used to validate user details and manage the login process.
-LoginTest.java – Contains JUnit tests for checking the Login class methods.
-Pom.xml – Contains the Maven project configuration and JUnit dependencies.
-ReadME.md – Provides information about the project and explains how to use it
-HOW THE APPLICATION WORKS
-Registration
-The user is asked to enter:
-First Name
-Last Name
-Username
-Password
-Cellphone number
-The application checks that the required information has been entered and that the username, password and cellphone number meet the required conditions.
-Username Validation
-The username must:
-Contain an underscore (_)
-Be no longer than 5 characters, e.g. kyl_1
-Password Validation
-The password must:
-Contain at least 8 characters
-Have at least one uppercase letter
-Have at least one number
-Have at least one special character, e.g. Ch&&sec@ke99!
-Cellphone Number Validation
-The cellphone number must:
-Starts with +27
-Contain the correct number of digits
-Follow the required South African international format, e.g. +27838968976
-Login
-After successful registration, the user enters their username and password. The application compares the entered details with the registered details. If they match, the user receives a successful login message. If they do not match, an error message is displayed.
-JUnit Testing
-The project contains a LoginTest.java file that tests the different methods in the Login class.
-The tests check:
-Valid username
-Valid password
-Valid cellphone number
-Successful registration
-Successful login
-Login status
-Invalid username
-Invalid password
-Invalid cellphone number
-There are 9 JUnit tests in total.
-RUNNING THE PROJECT
-Running the application
-Open the project in NetBeans and run the Main.java file. The application will open in the console and ask the user to enter their registration and login details.
-Running the tests
-The tests can be run using Maven in NetBeans. The project should show:
-Tests run: 9, Failures: 0, Errors: 0, Skipped: 0
-BUILD SUCCESS
- (when all tests pass successfully).
-REQUIREMENTS
-To run this project, you need:
-Java Development Kit (JDK)
-Apache Maven
-NetBeans IDE
-JUnit 5
+GitHub
+Project Structure
+The Maven project is in the `ChatAppPart1` folder.
+`src/main/java/com/mycompany/chatapppart1/Main.java` - Runs the console application and handles user input.
+`src/main/java/com/mycompany/chatapppart1/Login.java` - Handles registration, validation, and login logic.
+`src/main/java/com/mycompany/chatapppart1/Message.java` - Handles message validation, IDs, hashes, sending, and storage.
+`src/test/java/com/mycompany/chatapppart1/LoginTest.java` - Tests registration and login features.
+`src/test/java/com/mycompany/chatapppart1/MessageTest.java` - Tests message features.
+`pom.xml` - Maven project configuration and dependencies.
+`messages.json` - Message storage file used by the application.
+How to Run
+Open the `ChatAppPart1` folder as a Maven project in NetBeans.
+Make sure Java 25 is configured for the project.
+Run `Main.java` from the `com.mycompany.chatapppart1` package.
+Follow the registration and login prompts in the console.
+Testing
+JUnit tests are located in `LoginTest.java` and `MessageTest.java`. They cover valid and invalid usernames, passwords, cellphone numbers, login results, message length, message IDs, hashes, and message actions.
+To run the tests with Maven, open a terminal in the `ChatAppPart1` folder and run:
+Regex Reference
+The `Message` class checks cellphone numbers using this Java regular expression:
+It matches `+27` followed by exactly nine digits. This represents the international format where the leading `0` from a South African national cellphone number is omitted.
+The `Login` class performs the equivalent check by verifying that the number begins with `+27`, has 12 characters in total, and contains only digits after the prefix.
+
