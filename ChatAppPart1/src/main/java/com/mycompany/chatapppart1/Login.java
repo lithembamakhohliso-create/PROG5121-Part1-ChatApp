@@ -36,6 +36,10 @@ public class Login {
         this.phoneNumber = phoneNumber;
 
     }
+
+    Login(String kyl_1, String chsecke99, String string) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     /*
      * This method sets the user's password.
      * It is used to store the password entered by the user
